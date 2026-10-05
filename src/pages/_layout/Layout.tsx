@@ -12,9 +12,13 @@ export default function Layout() {
     const {locale, switchLocale}= useContext(AppContext);
     return (
         <>
-            <div className="banner">
-                
-            </div>
+            <section className="supper-banner">
+                <img src="/img/supper-banner.png" alt="Supper-banner"/>
+
+                <div className="supper-banner-content">
+                    
+                </div>
+            </section>
 
             <header>
                 
@@ -32,7 +36,7 @@ export default function Layout() {
 
                 {/* при нажатии на кнопку, вызывается switchLocale(Locale_enUS), а  
                     switchLocale: setLocale из App.tsx, поэтому происходит setLocale(Locale_enUS) */}
-                     
+
                 <button onClick={() => switchLocale(Locale_enUS)}>en_US</button>
                 <button onClick={() => switchLocale(Locale_ukUA)}>uk_UA</button>
             </footer>
