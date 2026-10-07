@@ -7,7 +7,7 @@ export default function Home() {
     const {locale}= useContext(AppContext)
      return (
         <main>
-            <h1>{locale.homePageTitle}</h1>
+            {/* <h1>{locale.homePageTitle}</h1> */}
         </main>
     );
 }

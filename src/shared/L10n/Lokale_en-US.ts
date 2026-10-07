@@ -4,8 +4,10 @@
 const Locale_enUS:Record<string, string> = 
 {
     "suffix": "_en_US",
-    "homePageTitle": "Shop",
+    "pageTitle": "Foxtrot",
     "layoutFooterCopyright": "IT STEP, since 2026 Coursework",
+    "languageButton": "en",
+    "selectCity": "Kyiv",
 
 }
 
