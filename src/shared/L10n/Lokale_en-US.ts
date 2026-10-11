@@ -8,7 +8,18 @@ const Locale_enUS:Record<string, string> =
     "layoutFooterCopyright": "IT STEP, since 2026 Coursework",
     "languageButton": "en",
     "selectCity": "Kyiv",
-
+    "windowCity": "You are here: ",
+    "kyivCity": "The City of Kyiv?",
+    "changeCity": "Change",
+    "confirmCity": "Confirm",
+    "allPromotions": "All promotions",
+    "saleButtonHeader": "SALE UP TO 80% OFF",
+    "tradeIn": "Trade-in",
+    "storesHeader": "Stores",
+    "toCustomers": "To customers",
+    "btnHelp": "Help",
+    "signIn": "Sign In",
+    "btnCatalog": "PRODUCT CATALOG",
 }
 
 export default Locale_enUS;
