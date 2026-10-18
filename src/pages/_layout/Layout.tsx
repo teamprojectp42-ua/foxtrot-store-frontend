@@ -1,7 +1,14 @@
 import { Outlet } from "react-router-dom";
 import './ui/Layout.css';
 import { useContext, useState } from "react";
-import 'bootstrap-icons/font/bootstrap-icons.css'; 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import AppContext from "../../features/_context/AppContext";
 import Locale_enUS from "../../shared/L10n/Lokale_en-US";
@@ -28,7 +35,7 @@ export default function Layout() {
                         <img src="/images/euronics-group.jpg" alt="Euronics-group"/>
                 </div>
 
-                <nav className="header-navigation">
+                <nav className="header-top-row">
                     <div className="language-selector">
                         <button className="language-button">
                             <p>{locale.languageButton}</p>
@@ -100,11 +107,63 @@ export default function Layout() {
 
             <div className="main-row">
                 <button className="btn-catalog">
-                    <i className="bi bi-grid-3x3-gap-fill" style={{fontSize: '13px'}}></i>
-                    {locale.btnCatalog}
+                <i className="bi bi-grid-3x3-gap-fill" style={{fontSize: '13px'}}></i>
+                {locale.btnCatalog}
                 </button>
+                
+                <div className="search-box">
+                    <input type="text" className="main-input"></input> 
+                    <button className="search-btn">
+                    <i className="bi bi-search" style={{color: 'white', fontSize: '15px'}}></i>
+                    </button>
+                </div> 
+
+                <div className="main-row-buttons">
+
+                    <div className="_like">
+                        <button className="btn-liked">
+                            <i className="bi bi-heart icon-empty" style={{fontSize: '22px'}}></i>
+                            <i className="bi bi-heart-fill icon-filled" style={{ fontSize: '22px' }}></i>
+                        </button>
+                        <div>{locale.selected}</div>
+                    </div>
+
+                    <div className="_scales">
+                        <button className="btn-scales">
+                            <FontAwesomeIcon style={{fontSize: '22px'}} icon={faBalanceScale} />
+                        </button>
+                        <div>{locale.scales}</div>
+                    </div>
+
+                    <div className="_download-app">
+                        <button className="btn-download-app">
+                            <i className="bi bi-qr-code" style={{color: 'rgb(130, 93, 199)', fontSize: '20px'}}></i>
+                        </button>
+                        <div className="app-text">{locale.downloadApp}</div>
+
+                        <div className="qr-dropdown-window">
+                            <div className="qr-window-content">
+                                <img src="/images/qr-code.png" alt="QR Code" className="qr-image" />
+
+                                <div className="qr-text-block">
+                                    <h3 style={{fontSize: '18px'}}>{locale.downloadAppTitle}</h3>
+                                    <p style={{fontSize: '13px', color: 'rgb( 105, 104, 102)', paddingTop: '10px'}}>{locale.scanQrText}</p>
+                                    <div className="store-buttons">
+                                        <img src="/images/app-store.png" alt="App Store" className="btn-app-store"/>
+                                        <img src="/images/google-play.png" alt="Google Play" className="btn-google-play" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>          
+
+                    
                     
             </div>
+
+            
 
             <main>
                 <Outlet />
@@ -114,10 +173,10 @@ export default function Layout() {
                 {/* взять из текущей локали(Locale_ukUA или Locale_enUS)  значение layoutFooterCopyright*/}
                 {/* если locale = Locale_ukUA -- украинский перевод , если locale = Locale_enUS -- англ*/}
 
-                &copy; {locale.layoutFooterCopyright} 
+                &copy; {locale?.layoutFooterCopyright || "Euronics Group"} 
 
-                {/* при нажатии на кнопку, вызывается switchLocale(Locale_enUS), а  
-                    switchLocale: setLocale из App.tsx, поэтому происходит setLocale(Locale_enUS) */}
+                {/* при нажатии на кнопку, вызывается switchLocale(Locale_enUS), а  */}
+                {/*   switchLocale: setLocale из App.tsx, поэтому происходит setLocale(Locale_enUS) */}
                
                 
             </footer>
