@@ -1,10 +1,12 @@
 .home-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
     max-width: 1440px;  
     margin: 0 auto;         
     padding: 20px;          
     gap: 30px;
+    box-sizing: border-box;
     
 }
 
@@ -17,6 +19,7 @@
     padding-left: 45px;
     white-space: nowrap;
     background-color: rgb(255, 255, 255);
+    flex-shrink: 0; 
     /* box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06); */
 }
 
@@ -25,16 +28,52 @@
     padding-top: 15px;
 }
 
-main img {
-    height: 450px;
-    width: 240px;
-    border-radius: 20px;
-    margin-top: -30px;
+main {
+    flex: 1;
+    min-width: 0; /*  убираю бесконечный скролл */
+}
+
+.swiper-container-wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: -10px;
     margin-left: -15px;
 }
 
-.carousel-inner {
-    display: flex;
-    flex-direction: row;
-    gap: 22px;
+.swiper-slide {
+    overflow: hidden;  /* Чтобы картинка не вылезала за скругленные углы при увеличении */
+    border-radius: 15px;
+    display: block;
+    cursor: pointer;
+    height: 450px;
+}
+
+/* картинка внутри слайда */
+.swiper-slide img {
+    height: 450px;
+    object-fit: cover;  /* картинка мастабируется без искажений */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+    z-index: 10;
+}
+
+/* .swiper-container-wrapper .swiper-button-prev::after,
+.swiper-container-wrapper .swiper-button-next::after {
+   font-size: 14px !important;
+   font-weight: bold !important;
+   font-family: swiper-icons !important;
+} */
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    border: 2px;
+    border-color: rgb(233, 93, 42);
+    color: rgb(233, 93, 42);
 }
