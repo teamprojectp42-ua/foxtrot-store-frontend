@@ -43,6 +43,7 @@ const Locale_ukUA:Record<string, string> =
     "downloadApp": "Скачати застосунок",
     "downloadAppTitle": "Завантажуй застосунок Фокстрот",
     "scanQrText": "Скануй QR код та завантажуй",
+    "recommendedCategories": "Рекомендовані категорії",
 
 }
 

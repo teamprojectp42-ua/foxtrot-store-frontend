@@ -43,7 +43,8 @@ const Locale_enUS:Record<string, string> =
     "downloadApp": "Download the app",
     "downloadAppTitle": "Download the Foxtrot app",
     "scanQrText": "Scan QR and download",
-
+    "recommendedCategories": "Recommended categories",
+    
 
 
 

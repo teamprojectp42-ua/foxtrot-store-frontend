@@ -35,7 +35,7 @@ export default function Home() {
                 </aside>
 
                 <main>
-                    {/* https://getbootstrap.com/docs/5.3/components/carousel/ */}
+                    
                   <div className="swiper-container-wrapper">
                     <Swiper
                     // Модули - доп.инструменты слайдера.
@@ -64,6 +64,83 @@ export default function Home() {
                         <SwiperSlide><img src="/images/banner9.jpg" alt="9" /></SwiperSlide>
                     </Swiper>
                   </div>
+
+
+                  <div className='recommended-categories'>
+                    <h2>{locale.recommendedCategories}</h2>
+                     <div className="categories-grid">
+
+                        {/* Смартфоны */}
+                        <a href="/smartphones" className="category-card">
+                           <div className="image-wrapper">
+                             <img src="/images/smartphone.png" alt={locale?.smartphones} />
+                           </div>
+                           <p className="category-name">{locale?.smartphones}</p>
+                        </a>
+
+                        {/* Стиральные машины */}
+                        <a href="/washing-machines" className="category-card">
+                           <div className="image-wrapper">
+                             <img src="/images/washer.png" alt={locale?.homeAppliances} />
+                           </div>
+                           <p className="category-name">{locale?.homeAppliances}</p>
+                        </a>
+
+                        {/* Конвекторы */}
+                        <a href="/heaters" className="category-card">
+                            <div className="image-wrapper">
+                              <img src="/images/heater.png" alt={locale?.warmerTogether} />
+                            </div>
+                            <p className="category-name">{locale?.warmerTogether}</p>
+                        </a>
+
+                        {/* Телевизоры */}
+                        <a href="/televisions" className="category-card">
+                             <div className="image-wrapper">
+                               <img src="/images/tv.png" alt={locale?.televisionsAndProjectors} />
+                             </div>
+                             <p className="category-name">{locale?.televisionsAndProjectors}</p>
+                        </a>
+
+                        {/* Ноутбуки */}
+                        <a href="/laptops" className="category-card">
+                          <div className="image-wrapper">
+                            <img src="/images/laptop.png" alt={locale?.laptopsPCsTablets} />
+                          </div>
+                          <p className="category-name">{locale?.laptopsPCsTablets}</p>
+                        </a>
+
+                        {/* Холодильники */}
+                        <a href="/refrigerators" className="category-card">
+                          <div className="image-wrapper">
+                            <img src="/images/fridge.png" alt={locale?.homeAppliances} />
+                          </div>
+                          <p className="category-name">{locale?.homeAppliances}</p>
+                        </a>
+
+                        {/* Кофемашины */}
+                        <a href="/coffee-machines" className="category-card">
+                          <div className="image-wrapper">
+                            <img src="/images/coffee-machine.png" alt={locale?.kitchenAppliances} />
+                          </div>
+                          <p className="category-name">{locale?.kitchenAppliances}</p>
+                        </a>
+
+                        {/* Наушники */}
+                        <a href="/headphones" className="category-card">
+                          <div className="image-wrapper">
+                            <img src="/images/headphones.png" alt={locale?.audioPhotosVideo} />
+                          </div>
+                          <p className="category-name">{locale?.audioPhotosVideo}</p>
+                        </a>
+                     </div>
+                  </div>
+
+                  
+
+            
+
+                  
                 </main>
             </div>
                 

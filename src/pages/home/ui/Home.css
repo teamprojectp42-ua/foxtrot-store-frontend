@@ -64,16 +64,71 @@ main {
     z-index: 10;
 }
 
-/* .swiper-container-wrapper .swiper-button-prev::after,
-.swiper-container-wrapper .swiper-button-next::after {
-   font-size: 14px !important;
-   font-weight: bold !important;
-   font-family: swiper-icons !important;
-} */
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
     border: 2px;
     border-color: rgb(233, 93, 42);
     color: rgb(233, 93, 42);
+}
+
+.recommended-categories h2 {
+    margin-top: 25px;
+    margin-left: -15px;
+    font-weight: normal;
+}
+
+.categories-grid {
+    display: flex;
+    gap: 8px;
+    padding: 10px 5px;
+    margin-left: -20px;
+    align-items: flex-start;  /* выравниваю все карточки по верхней линии */
+}
+
+.category-card {
+    flex: 0 0 125px; 
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: inherit;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.image-wrapper {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ada8a8;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    /* растягиваю картинку на 100% шир. и выс. рамки */
+    width: 100% !important;
+    height: 100% !important;
+
+    max-height: none !important;
+    max-width: none !important;
+    object-fit: cover; 
+    box-sizing: border-box;
+}
+
+.category-name {
+    font-size: 14px;
+    font-family: sans-serif;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 !important;
+
+    /* чтобы не ломалась вёрстка */
+    white-space: normal;
+    word-wrap: break-word;
 }
