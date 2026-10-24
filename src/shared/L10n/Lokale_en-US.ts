@@ -19,6 +19,12 @@ const Locale_enUS:Record<string, string> =
     "toCustomers": "To customers",
     "btnHelp": "Help",
     "signIn": "Sign In",
+    "signInWindow": "Log in to personal account",
+    "btnNext": "next",
+    "QRDuration": "The QR code will be valid",
+    "withHelp": "Or with the help of",
+    "QRAuth": "Quick authorization via the Foxtrot app using a QR code!",
+    "personalDataProcessing": "I consent to the processing of my personal data in accordance with this offer",
     "btnCatalog": "PRODUCT CATALOG",
     "selected": "Selected",
     "scales": " Comparison",
@@ -44,6 +50,7 @@ const Locale_enUS:Record<string, string> =
     "downloadAppTitle": "Download the Foxtrot app",
     "scanQrText": "Scan QR and download",
     "recommendedCategories": "Recommended categories",
+    
     
 
 
