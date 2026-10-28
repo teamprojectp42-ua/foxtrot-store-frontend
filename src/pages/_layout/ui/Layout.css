@@ -252,7 +252,7 @@
 .navigation-buttons3 {
     display: flex;
     flex-direction: row;
-    margin-left: 220px ;
+    margin-left: 230px;
 }
 
 .navigation-buttons3 button {
@@ -261,13 +261,14 @@
     align-items: center;
     color: rgb(130, 93, 199); 
     padding: 6px 12px;
+    margin-left: -8px;
     border: none;
     background-color: transparent; 
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
 }
 
-.btnSignIn {
+.icon-btnSignIn button {
     font-weight: 500;
 }
 
@@ -314,6 +315,37 @@
 
     width: 1.5rem;
     height: 1.5rem;
+}
+
+.cart-container {
+    display: inline-block;
+    margin: 0px 0px 5px -10px;
+}
+
+.cart-container button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgb(238, 235, 255);
+    color: rgb(127, 95, 196);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 23px; 
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.cart-text {
+    font-size: 13px;
+    font-weight: 700; 
 }
 
 .modal-left-side {
@@ -755,11 +787,134 @@
 }
 
 .app-text {
-    font-size: 13px;
     display: inline-block;
     text-align: left;
     max-width: 80px;
     color: rgb(130, 93, 199);
 }
+
+.selected-items,
+.comparison,
+.app-text {
+    font-size: 14px;
+}
+
+.bonus-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: -30px;
+}
+
+.btn-bonus {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.bonus-row-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.bonus-text-main {
+    color: rgb(130, 93, 199);
+    line-height: 1.2;
+}
+
+.bonus-badge {
+    background-color: #7952b3;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px 1px 1px 1px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.bonus-text-sub {
+    color: rgb(130, 93, 199);
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+.bonus-popover {
+    position: absolute;
+    top: 100%;
+    left: -40%;
+    width: 230px;
+    height: 240px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    font-size: 12px;
+    box-sizing: border-box;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.bonus-wrapper:hover .bonus-popover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bonus-popover h3 {
+    margin: -3px 0 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+}
+
+.accent-block {
+    background-color: #dcd7f7;
+    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.accent-block p {
+    padding-left: 2px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: #1c1c1e;
+}
+
+.bonus-popover-description {
+    margin: 0px 0 10px 0;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: #666666;
+    text-align: left;
+}
+
+.btn-bonus-popover {
+    width: 210px;
+    height: 35px;
+    background-color: #f05a22;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-bonus-popover:hover {
+    background-color: #d64918;
+}
+
 
 

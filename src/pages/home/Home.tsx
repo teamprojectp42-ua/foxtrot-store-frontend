@@ -14,25 +14,81 @@ export default function Home() {
 
          <div className="home-container">
                 <aside className="sidebar">
-                    <h1>{locale?.warmerTogether}</h1>
-                    <h1>{locale?.powerSources}</h1>
-                    <h1>{locale?.smartphones}</h1>
-                    <h1>{locale?.kitchenAppliances}</h1>
-                    <h1>{locale?.homeAppliances}</h1>
-                    <h1>{locale?.beautyAndHealth}</h1>
-                    <h1>{locale?.laptopsPCsTablets}</h1>
-                    <h1>{locale?.televisionsAndProjectors}</h1>
-                    <h1>{locale?.forGamers}</h1>
-                    <h1>{locale?.smartGadgets}</h1>
-                    <h1>{locale?.audioPhotosVideo}</h1>
-                    <h1>{locale?.homeGardenPetSupplies}</h1>
-                    <h1>{locale?.dishes}</h1>
-                    <h1>{locale?.sportAndTourism}</h1>
-                    <h1>{locale?.toolsAndAutomotiveProducts}</h1>
-                    <h1>{locale?.productsForChildren}</h1>
-                    <h1>{locale?.services}</h1>
-                    <h1>{locale?.allCategories}</h1>
+
+                    <div>
+                        <i className='bi bi-lightning-fill'></i>
+                        <h1>{locale?.warmerTogether}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-battery-charging'></i>
+                        <h1>{locale?.powerSources}</h1>
+                    </div>
+                    <div>
+                        <i className= 'bi bi-phone'></i>
+                        <h1>{locale?.smartphones}</h1>
+                    </div>
+                    <div>
+                        <i className="bi bi-plug"></i>
+                        <h1>{locale?.kitchenAppliances}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-house-door'></i>
+                        <h1>{locale?.homeAppliances}</h1>
+                    </div>
+                    <div>
+                        <i className="bi bi-scissors"></i>
+                        <h1>{locale?.beautyAndHealth}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-laptop'></i>
+                        <h1>{locale?.laptopsPCsTablets}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-display'></i>
+                        <h1>{locale?.televisionsAndProjectors}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-controller'></i>
+                        <h1>{locale?.forGamers}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-smartwatch'></i>
+                        <h1>{locale?.smartGadgets}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-images'></i>
+                        <h1>{locale?.audioPhotosVideo}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-tree'></i>
+                        <h1>{locale?.homeGardenPetSupplies}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-fork-knife'></i>
+                        <h1>{locale?.dishes}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-backpack'></i>
+                        <h1>{locale?.sportAndTourism}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-tools'></i>
+                        <h1>{locale?.toolsAndAutomotiveProducts}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-balloon'></i>
+                        <h1>{locale?.productsForChildren}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-gear'></i>
+                        <h1>{locale?.services}</h1>
+                    </div>
+                    <div>
+                        <i className='bi bi-grid-3x3-gap'></i>
+                        <h1>{locale?.allCategories}</h1>
+                    </div>
                 </aside>
+                
 
                 <main>
                     
