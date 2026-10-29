@@ -13,6 +13,7 @@ import NotFound from "../../pages/not_found/NotFound";
 import Product from "../../pages/product/Product";
 import Profile from "../../pages/profile/Profile";
 import Search from "../../pages/search/Search";
+import Promotion from "../../pages/promotion/Promotion";
 
 export default function Router() {
     return <BrowserRouter>
@@ -32,6 +33,7 @@ export default function Router() {
                 <Route path="home" element={<Home />} />
                <Route path="login" element={<Login />} />
                 <Route path="profile" element={<Profile />} />
+                <Route path="promotions/:slug" element={<Promotion />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
