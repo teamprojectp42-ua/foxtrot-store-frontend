@@ -19,9 +19,22 @@ const Locale_ukUA:Record<string, string> =
     "toCustomers": "Покупцям",
     "btnHelp": "Допомога",
     "signIn": "Увійти в кабінет",
+    "signInWindow": "Увійти в особистий кабінет",
+    "btnNext": "далі",
+    "withHelp": "або за допомогою",
+    "QRAuth": "Швидка авторизація через програму Foxtrot за допомогою QR-коду!",
+    "QRDuration": "QR-код діятиме",
     "btnCatalog": "КАТАЛОГ ТОВАРІВ",
+    "personalDataProcessing": "Я даю згоду на обробку моїх персональних даних відповідно до цієї оферти",
     "selected": "Обране",
     "scales": "Порівняння",
+    "bonusTextMain": "Отримати",
+    "bonusTextSub": "Ваші бонуси",
+    "Cashback": "Кешбек",
+    "accentBlock": "акційних бонусів за реєстрацію! Отримуй і використовуй вже при першій купівлі!",
+    "bonusPopoverDescription": "Постійні покупці Фокстрот отримують кешбек за кожну покупку в мережі, який можна використовувати при оплаті наступних покупок",
+    "moreDetails": "ДЕТАЛЬНІШЕ",
+    "Cart": "КОШИК",
     "warmerTogether": "Разом тепліше до -55%",
     "powerSources": "Джерела живлення",
     "smartphones": "Смартфони",
@@ -44,6 +57,7 @@ const Locale_ukUA:Record<string, string> =
     "downloadAppTitle": "Завантажуй застосунок Фокстрот",
     "scanQrText": "Скануй QR код та завантажуй",
     "recommendedCategories": "Рекомендовані категорії",
+    
 
 }
 

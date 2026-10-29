@@ -19,9 +19,22 @@ const Locale_enUS:Record<string, string> =
     "toCustomers": "To customers",
     "btnHelp": "Help",
     "signIn": "Sign In",
+    "signInWindow": "Log in to personal account",
+    "btnNext": "next",
+    "QRDuration": "The QR code will be valid",
+    "withHelp": "Or with the help of",
+    "QRAuth": "Quick authorization via the Foxtrot app using a QR code!",
+    "personalDataProcessing": "I consent to the processing of my personal data in accordance with this offer",
     "btnCatalog": "PRODUCT CATALOG",
     "selected": "Selected",
     "scales": " Comparison",
+    "bonusTextMain": "Get",
+    "bonusTextSub": "Your bonuses",
+    "Cashback": "Cashback",
+    "accentBlock": "Promotional bonuses for registration! Get them and use them on your very first purchase!",
+    "bonusPopoverDescription": "Regular Foxtrot customers receive cashback on every purchase within the chain, which can be used to pay for future purchases",
+    "moreDetails": "MORE DETAILS",
+    "Cart": "CART",
     "warmerTogether": "Warmer together: up to -55%",
     "powerSources": "Power Sources",
     "smartphones": "Smartphones",
@@ -44,6 +57,7 @@ const Locale_enUS:Record<string, string> =
     "downloadAppTitle": "Download the Foxtrot app",
     "scanQrText": "Scan QR and download",
     "recommendedCategories": "Recommended categories",
+    
     
 
 

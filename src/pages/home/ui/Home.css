@@ -13,10 +13,11 @@
 .sidebar {
     width: 330px;           
     min-width: 280px; 
-    font-size: 7px;
+    font-size: 7.5px;
     margin-top: -20px;
     margin-left: -10px;
-    padding-left: 45px;
+    padding-left: 15px;
+    /* padding-top: -15px; */
     white-space: nowrap;
     background-color: rgb(255, 255, 255);
     flex-shrink: 0; 
@@ -131,4 +132,16 @@ main {
     /* чтобы не ломалась вёрстка */
     white-space: normal;
     word-wrap: break-word;
+}
+
+aside div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+aside i {
+   font-size: 18px;
+   color: #666666;
+   margin-top: 12px;
 }

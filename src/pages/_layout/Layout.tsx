@@ -21,6 +21,8 @@ export default function Layout() {
     // здесь Layout получает данные из Context: locale, switchLocale
     const {locale, switchLocale}= useContext(AppContext);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+    const [isSignInOpen, setIsSignInOpen] = useState(false);
+
     return (
         <>
             <section className="super-banner">
@@ -93,11 +95,10 @@ export default function Layout() {
                                 <i className="bi bi-question-circle" style={{fontSize: '16px', color: 'rgb(130, 93, 199)'}}></i>
                                 <button>{locale.btnHelp}</button>
                             </div>
-                            <div className="icon-btnSignIn">
+                            <div className="icon-btnSignIn" onClick={() => setIsSignInOpen(true)}>
                                 <i className="bi bi-person-circle" style={{fontSize: '16px', color: 'rgb(130, 93, 199)'}}></i>
-                                <button className="btnSignIn">{locale.signIn}</button>
+                                <button>{locale.signIn}</button>
                             </div>
-                            
                         </div>
                         
                     </div>
@@ -125,14 +126,14 @@ export default function Layout() {
                             <i className="bi bi-heart icon-empty" style={{fontSize: '22px'}}></i>
                             <i className="bi bi-heart-fill icon-filled" style={{ fontSize: '22px' }}></i>
                         </button>
-                        <div>{locale.selected}</div>
+                        <div className="selected-items">{locale.selected}</div>
                     </div>
 
                     <div className="_scales">
                         <button className="btn-scales">
                             <FontAwesomeIcon style={{fontSize: '22px'}} icon={faBalanceScale} />
                         </button>
-                        <div>{locale.scales}</div>
+                        <div className="comparison">{locale.scales}</div>
                     </div>
 
                     <div className="_download-app">
@@ -156,6 +157,41 @@ export default function Layout() {
                             </div>
                         </div>
                     </div>
+
+                    <div className="bonus-wrapper">
+                        <button className="btn-bonus">
+                            <div className="bonus-row-top">
+                                <div className="bonus-text-main">{locale.bonusTextMain}</div>
+                                <div className="bonus-badge">200 ₴</div>
+                            </div>
+                            <div className="bonus-text-sub">{locale.bonusTextSub}</div>
+                        </button>
+
+                        <div className="bonus-popover">
+                            <h3>{locale.Cashback}</h3>
+                            <div className="accent-block">
+                                <p>
+                                    <strong>200 ₴ </strong> {locale.accentBlock}
+                                </p>
+                            </div>
+                        
+
+                            <p className="bonus-popover-description">
+                                {locale.bonusPopoverDescription}
+                            </p>
+    
+                            <button className="btn-bonus-popover">
+                                {locale.moreDetails}
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="cart-container">
+                        <button>
+                            <i className="bi bi-cart3 cart-icon"></i>
+                            <span className="cart-text">{locale.Cart}</span>
+                        </button>
+                    </div>
                         
                 </div>          
 
@@ -168,6 +204,68 @@ export default function Layout() {
             <main>
                 <Outlet />
             </main>
+
+            {isSignInOpen && (
+                <div className="modal-window-signIn" onClick={() => setIsSignInOpen(false)}>
+                    <div className="modal-signin-window" onClick={(e) => e.stopPropagation()}>
+                        
+
+                        <div className="modal-left-side">
+                            <h2 className="modal-title">{locale.signInWindow}</h2>
+                            <hr className="my-horizontal-line" />
+                            <form className="signIn-form" onSubmit={(e) => e.preventDefault()}>
+                                <div className="phone-input-wrapper">
+                                    <span className="phone-prefix">+380</span>
+                                    <input type="tel" className="modal-input-phone" placeholder=" " required></input>
+                                </div>
+
+                                <button type="submit" className="btn-next">{locale.btnNext}</button>
+                                <div className="social-divider">{locale.withHelp}</div>
+
+                                <div  className="social-buttons">
+                                    <button className="btn-social-google">
+                                        <img src="/images/google-icon.png" alt="Google"/>
+                                        <h2>Google</h2>
+                                    </button>
+                                    <button className="btn-social-apple">
+                                        <img src="/images/apple-icon.png" alt="Apple"/>
+                                        <h2>Apple</h2>
+                                    </button>
+                                </div>
+
+                            <label className="agreement-checkbox">
+                                <input type="checkbox" />
+                                <span>{ locale.personalDataProcessing }</span>
+                            </label>
+                            </form>
+                        </div>
+
+
+                        <div className="modal-right-side">
+                            <button type="button" className="btn-close btn-close-white modal-close-btn" onClick={() => setIsSignInOpen(false)}>⨯</button>
+                            <h3>{ locale.QRAuth }</h3>
+                            <div className="qr-code-wrapper">
+                                <img src="/images/qr-code-wrapper.png" alt="QR Code" className="modal-qr-img"/>
+                            </div>
+                            <p className="qr-timer">{locale.QRDuration} <span>00:00</span></p>
+                            <img src="/images/fox-ears.png" className="fox_ears"/>
+                        </div>
+
+
+
+
+                            
+
+                            
+
+                            
+                        
+                        
+
+
+                    </div>
+                </div>
+            )}
 
             <footer>
                 {/* взять из текущей локали(Locale_ukUA или Locale_enUS)  значение layoutFooterCopyright*/}
